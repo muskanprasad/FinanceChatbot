@@ -8,5 +8,4 @@ const PORT = config.port;
 app.listen(PORT, () => {
     console.log(`Finance Chatbot Backend working on port ${PORT}`);
     console.log(`Access at: http://localhost:${PORT}`);
-
 })
