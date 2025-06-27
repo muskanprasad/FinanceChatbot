@@ -1,0 +1,48 @@
+/* src/css/Settings.css */
+.setting-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: var(--card-bg, #fff);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: var(--text-color, #333);
+}
+
+.dark-mode .setting-container {
+  background-color: var(--card-bg-dark, #2b2b4d);
+  color: var(--text-color-dark, #e0e0e0);
+}
+
+.setting-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: inherit;
+}
+
+.setting-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border-color, #eee);
+}
+
+.dark-mode .setting-option {
+    border-bottom-color: var(--border-color-dark, #3c3c5c);
+}
+
+.setting-option:last-child {
+  border-bottom: none;
+}
+
+.setting-option label {
+  font-size: 1.1em;
+  color: inherit;
+}
+
+.setting-option button {
+  padding: 8px 15px;
+  font-size: 0.9em;
+  border-radius: 5px;
+}

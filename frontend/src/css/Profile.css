@@ -1,0 +1,37 @@
+/* src/css/Profile.css */
+.profile-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: var(--card-bg, #fff); /* Uses theme variables */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: var(--text-color, #333);
+}
+
+.dark-mode .profile-container {
+  background-color: var(--card-bg-dark, #2b2b4d);
+  color: var(--text-color-dark, #e0e0e0);
+}
+
+.profile-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: inherit; /* Inherit text color from container */
+}
+
+.profile-details p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--border-color, #eee);
+  padding-bottom: 10px;
+}
+
+.dark-mode .profile-details p {
+    border-bottom-color: var(--border-color-dark, #3c3c5c);
+}
+
+.profile-details strong {
+  margin-right: 10px;
+  color: inherit;
+}

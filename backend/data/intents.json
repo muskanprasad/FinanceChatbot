@@ -1,0 +1,53 @@
+{
+    "intents": [
+    {
+        "keywords": ["hello", "hi", "hey"],
+        "responses": ["Hello! How can I assist you with your finances today?", "Hi there! What can I do for you?"],
+        "name": "greet"
+    },
+    {
+        "keywords": ["balance", "account", "money"],
+        "responses": ["Sure, I can help you check your account balance. Which account are you interested in?", "What is your account type (e.g., savings, checking)?"],
+        "name": "check_balance"
+    },
+    {
+        "keywords": ["transaction", "statement", "history"],
+        "responses": ["I can provide your recent transaction history. What period are you interested in?"],
+        "name": "get_transactions"
+    },
+    {
+        "keywords": ["loan", "borrow"],
+        "responses": ["We offer various loan options. Are you interested in a personal loan, home loan, or business loan?"],
+        "name": "ask_loan_info"
+    },
+    {
+        "keywords": ["thank you", "thanks"],
+        "responses": ["You're welcome! Is there anything else I can help you with?", "Glad I could help!"],
+        "name": "thank_you"
+    },
+    {
+        "keywords": ["bye", "goodbye", "see ya"],
+        "responses": ["Goodbye! Have a great day.", "See you next time!"],
+        "name": "goodbye"
+    },
+    {
+        "name": "get_loan_details",
+        "keywords": ["loan details", "my loan", "loan statement", "show my loan", "current loan", "emi", "next emi"],
+        "responses": [
+        "Please specify which loan details you're looking for, or I can tell you about your current loans.",
+        "I can help you with your loan information. What kind of loan are you asking about?",
+        "To get your loan statement, please specify the loan type (e.g., personal, home)."
+        ]
+    },
+    {
+        "name": "get_transactions",
+        "keywords": ["transactions", "transaction history", "recent transactions", "last transactions", "account activity", "past activity"],
+        "responses": [
+        "I can provide your recent transaction history. What period are you interested in?",
+        "Here are your latest transactions.",
+        "Looking for your transaction history? Tell me the date range or count."
+        ]
+    }
+],
+"fallback_response": "I'm sorry, I don't understand that. Could you please rephrase?"
+}

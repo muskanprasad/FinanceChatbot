@@ -1,0 +1,56 @@
+{
+    "users": {
+    "user123": {
+    "name": "Amit Sharma",
+    "accounts": [
+        {
+            "type": "savings",
+            "account_number": "XXXX-1234",
+            "balance": 75890.50,
+            "currency": "INR",
+            "branch": "Ranchi Main"
+        },
+        {
+            "type": "checking",
+            "account_number": "XXXX-5678",
+            "balance": 12345.75,
+            "currency": "INR",
+            "branch": "Ranchi Main"
+        },
+        {
+            "type": "credit",
+            "account_number": "XXXX-9012",
+            "balance": -5000.00,
+            "currency": "INR",
+            "credit_limit": 50000.00
+        }
+    ],
+    "transactions": [
+        { "id": "tx001", "account_type": "savings", "date": "2025-06-22", "description": "Online Shopping", "amount": -1500.00 },
+        { "id": "tx002", "account_type": "checking", "date": "2025-06-21", "description": "Salary Deposit", "amount": 45000.00 },
+        { "id": "tx003", "account_type": "savings", "date": "2025-06-20", "description": "ATM Withdrawal", "amount": -5000.00 },
+        { "id": "tx004", "account_type": "credit", "date": "2025-06-18", "description": "Restaurant Bill", "amount": -1200.00 }
+    ],
+    "loans": [
+        {"type": "personal", "amount": 100000.00, "emi": 5000.00, "next_due_date": "2025-07-10"},
+        {"type": "home", "amount": 2500000.00, "emi": 25000.00, "next_due_date": "2025-07-05"}
+    ]
+    },
+    "user_another": {
+        "name": "Priya Singh",
+        "accounts": [
+        {
+            "type": "savings",
+            "account_number": "XXXX-0001",
+            "balance": 120000.00,
+            "currency": "INR",
+            "branch": "Ranchi Satellite"
+        }
+    ]
+}
+},
+    "loan_products_info": [
+    {"type": "personal", "description": "Flexible loans for personal needs, up to 5 Lakhs.", "interest_rate": "10-15%"},
+    {"type": "home", "description": "Loans for purchasing or constructing a home, attractive rates.", "interest_rate": "7-9%"}
+]
+}

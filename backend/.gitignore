@@ -1,0 +1,42 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+.pnp/
+.pnp.js
+
+# Environment variables
+.env
+.env.production
+.env.development
+.env.local
+.env.test
+
+# Logs
+*.log
+logs/
+*.sqlite
+*.sqlite-journal
+
+# Compiled output
+/dist/
+/build/
+/tmp/
+
+# Editor/IDE specific files
+.vscode/        # Visual Studio Code
+.idea/          # IntelliJ IDEA
+.DS_Store       # macOS
+*.swp           # Vim swap files
+*.swo           # Vim swap files
+*~              # Emacs backup files
+
+# npm package manager cache
+.npm/
+
+# Test coverage reports
+/coverage/
+.nyc_output/
+
+# Prisma (if used in future)
+/prisma/migrations/
