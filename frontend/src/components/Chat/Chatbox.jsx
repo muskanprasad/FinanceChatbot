@@ -31,11 +31,11 @@ function Chatbox() {
       const headers = token ? { Authorization: `Bearer ${token}` } : {};
 
       const response = await axios.post(
-        'https://finance-chatbot-jth5.onrender.com/api/chat', // Your chatbot API endpoint
+        'https://finance-chatbot-jth5.onrender.com/api/chat', // Chatbot API endpoint
         { message: messageText },
         { headers }
       );
-      return response.data.response; // Assuming your backend returns { reply: "..." }
+      return response.data.response; 
     } catch (error) {
       console.error('Error sending message to bot:', error.response?.data || error.message);
       return "Sorry, I'm having trouble connecting right now. Please try again later.";
