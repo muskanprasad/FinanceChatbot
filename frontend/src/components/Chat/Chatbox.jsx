@@ -31,7 +31,7 @@ function Chatbox() {
       const headers = token ? { Authorization: `Bearer ${token}` } : {};
 
       const response = await axios.post(
-        'http://localhost:3000/api/chat', // Your chatbot API endpoint
+        'https://finance-chatbot-jth5.onrender.com/api/chat', // Your chatbot API endpoint
         { message: messageText },
         { headers }
       );
