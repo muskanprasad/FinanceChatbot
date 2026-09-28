@@ -12,6 +12,8 @@ function Chatbox() {
   const messagesEndRef = useRef(null); // Ref for auto-scrolling
   const { user } = useAuth(); // Access the user object (for token if needed)
 
+const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
+
   // Auto-scroll to the bottom of messages
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -31,7 +33,7 @@ function Chatbox() {
       const headers = token ? { Authorization: `Bearer ${token}` } : {};
 
       const response = await axios.post(
-        'https://finance-chatbot-jth5.onrender.com/api/chat', // Chatbot API endpoint
+        `${apiUrl}/chat`,
         { message: messageText },
         { headers }
       );
