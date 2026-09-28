@@ -15,13 +15,13 @@ async function generateTextFromGroq(prompt) {
     }
     try {
         const response = await client.chat.completions.create({
-            model: "mixtral-8x7b-32768",
-            messages: [
-                { role: "user", content: prompt }
-            ],
-            temperature: 0.7,
-            max_tokens: 1024,
-        });
+    model: "llama-3.1-70b-versatile",
+    messages: [
+        { role: "user", content: prompt }
+    ],
+    temperature: 0.7,
+    max_tokens: 1024,
+});
         const text = response.choices[0].message.content;
         console.log('Successfully received response from Groq.');
         return text;
