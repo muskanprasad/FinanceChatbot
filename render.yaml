@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: finance-chatbot-backend
+    runtime: node
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: GROQ_API_KEY
+        scope: build,runtime
+      - key: MONGODB_URI
+        scope: runtime
+      - key: JWT_SECRET
+        scope: runtime
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+
+  - type: static
+    name: finance-chatbot-frontend
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: frontend/dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://finance-chatbot-backend.onrender.com/api

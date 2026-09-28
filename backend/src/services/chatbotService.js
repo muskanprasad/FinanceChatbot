@@ -7,7 +7,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const geminiService = require('./geminiService');
+const groqService = require('./groqService');
 
 const intentsDataPath = path.join(__dirname, '../../data/intents.json');
 const intentsData = JSON.parse(fs.readFileSync(intentsDataPath, 'utf8'));
@@ -64,7 +64,7 @@ async function getChatbotResponse(message, user) {
     else if (intent === "budgeting") {
         const prompt = `You are a finance-only assistant. Answer the following question with a focus on personal budgeting advice.\n\nUser: ${message}`;
         try {
-            responseText = await geminiService.generateTextFromGemini(prompt);
+            responseText = await groqService.generateTextFromGroq(prompt);
             responseText += baseDisclaimer;
         } catch (err) {
             console.error("Gemini error:", err);
@@ -76,7 +76,7 @@ async function getChatbotResponse(message, user) {
     else {
         const prompt = `You are a helpful assistant who strictly responds to finance-related questions only. If the user's question is NOT about finance, budgeting, investing, saving, loans, or credit, reply with: "I can only answer queries related to finance and budgeting."\n\nUser: ${message}`;
         try {
-            responseText = await geminiService.generateTextFromGemini(prompt);
+            responseText = await groqService.generateTextFromGroq(prompt);
             responseText += baseDisclaimer;
         } catch (err) {
             console.error("Gemini error fallback:", err);
